@@ -202,3 +202,21 @@ html {
 .safe-area-top {
   padding-top: env(safe-area-inset-top);
 }
+
+
+
+/* Tidio Widget Customization */
+#tidio-chat-iframe {
+  /* Match your portfolio's color scheme */
+  --tidio-primary-color: #6366f1; /* Adjust this to your theme's color */
+  --tidio-chat-button-bg: #6366f1; /* You can also change the button color */
+  bottom: 20px !important;
+  right: 20px !important;
+  border-radius: 12px; /* Example: adds rounded corners to the chat window */
+}
+/* This media query hides the Tidio widget on mobile devices if you prefer */
+@media (max-width: 768px) {
+  #tidio-chat-iframe {
+    bottom: 80px !important; /* Example: moves the widget up on smaller screens */
+  }
+}

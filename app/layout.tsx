@@ -2,9 +2,9 @@ import '@/app/globals.css';
 import { Footer } from '@/components/footer';
 import { Navbar } from '@/components/navbar';
 import { ThemeProvider } from '@/components/theme-provider';
-import { VoiceNavigation } from '@/components/voice-navigation';
 import type { Metadata, Viewport } from 'next';
 import { Inter } from 'next/font/google';
+import Script from 'next/script';
 import type React from 'react';
 
 const inter = Inter({
@@ -66,16 +66,19 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning className={inter.variable}>
-      <body className={`${inter.className} min-h-screen bg-background antialiased flex flex-col`}>
+      <body
+        className={`${inter.className} flex min-h-screen flex-col bg-background antialiased`}
+      >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <Navbar />
           <main className="flex-1">{children}</main>
           <Footer />
-          <VoiceNavigation />
         </ThemeProvider>
+        <Script
+          src="//code.tidio.co/ofvohdtqt6bdilrcmxs8csixx2toig46.js"
+          strategy="lazyOnload"
+        />
       </body>
     </html>
   );
 }
-
-import './globals.css';
