@@ -1,5 +1,4 @@
 "use client"
-
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import {
@@ -18,14 +17,12 @@ export function ResumeDownload() {
 
   const handleDownload = () => {
     setIsDownloading(true)
-
     // Simulate download delay
     setTimeout(() => {
       setIsDownloading(false)
-
       // Create a fake download by creating a temporary anchor element
       const link = document.createElement("a")
-      link.href = '/RajanPrajapati_FullStack_MERN_Resume.pdfg'; // Replace with actual resume file
+      link.href = '/RajanPrajapati_FullStack_MERN_Resume.pdf'; // Fixed: Corrected file extension from .pdfg to .pdf
       link.download = 'RajanPrajapati_FullStack_MERN_Resume.pdf';
       document.body.appendChild(link)
       link.click()
@@ -48,14 +45,12 @@ export function ResumeDownload() {
             Get a copy of my latest resume with detailed information about my skills, experience, and education.
           </DialogDescription>
         </DialogHeader>
-
         <div className="flex items-center justify-center py-4">
           <div className="flex flex-col items-center gap-2">
             <FileText className="h-16 w-16 text-purple-600" />
-            <span className="text-sm text-muted-foreground">Rajan_Prajapati_Resume.pdf</span>
+            <span className="text-sm text-muted-foreground">RajanPrajapati_FullStack_MERN_Resume.pdf</span>
           </div>
         </div>
-
         <DialogFooter>
           <Button
             onClick={handleDownload}
