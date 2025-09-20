@@ -25,8 +25,8 @@ export function ResumeDownload() {
 
       // Create a fake download by creating a temporary anchor element
       const link = document.createElement("a")
-      link.href = "/placeholder.svg" // Replace with actual resume file
-      link.download = "Rajan_Prajapati_Resume.pdf"
+      link.href = '/RajanPrajapati_FullStack_MERN_Resume.pdfg'; // Replace with actual resume file
+      link.download = 'RajanPrajapati_FullStack_MERN_Resume.pdf';
       document.body.appendChild(link)
       link.click()
       document.body.removeChild(link)
@@ -79,4 +79,3 @@ export function ResumeDownload() {
     </Dialog>
   )
 }
-
