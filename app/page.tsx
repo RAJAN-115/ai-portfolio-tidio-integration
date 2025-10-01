@@ -1,13 +1,10 @@
 'use client';
-
-import { ChatbotButton } from '@/components/chatbot-button';
 import { CurrentTime } from '@/components/current-time';
 import { GreetingMessage } from '@/components/greeting-message';
 import { ResponsiveContainer } from '@/components/responsive-container';
 import { ResumeDownload } from '@/components/resume-download';
 import TypewriterEffect from '@/components/typewriter-effect';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
-
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Typography } from '@/components/ui/typography';
@@ -30,7 +27,9 @@ export default function Home() {
         <div className="animate-fade-in">
           <Avatar className="h-28 w-28 border-2 border-primary transition-all hover:border-4 hover:shadow-lg hover:shadow-primary/20 sm:h-32 sm:w-32">
             <AvatarImage src="/placeholder-user.png" alt="Profile Avatar" />
-            <AvatarFallback>RP</AvatarFallback>
+            <AvatarFallback>
+              RP
+            </AvatarFallback>
           </Avatar>
         </div>
 
@@ -71,8 +70,8 @@ export default function Home() {
           className="animate-fade-in-up flex flex-wrap items-center justify-center gap-2"
           style={{ animationDelay: '200ms' }}
         >
-          <CurrentTime />
           <GreetingMessage />
+          <CurrentTime />
         </div>
 
         <div
@@ -111,11 +110,11 @@ export default function Home() {
                   strokeLinejoin="round"
                   className="text-purple-600"
                 >
-                  <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path>
-                  <polyline points="14 2 14 8 20 8"></polyline>
-                  <path d="M16 13H8"></path>
-                  <path d="M16 17H8"></path>
-                  <path d="M10 9H8"></path>
+                  <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z" />
+                  <polyline points="14 2 14 8 20 8" />
+                  <path d="M16 13H8" />
+                  <path d="M16 17H8" />
+                  <path d="M10 9H8" />
                 </svg>
               </div>
               <Typography variant="h3">Projects</Typography>
@@ -154,8 +153,8 @@ export default function Home() {
                   strokeLinejoin="round"
                   className="text-purple-600"
                 >
-                  <path d="M12 20h9"></path>
-                  <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path>
+                  <path d="M12 20h9" />
+                  <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z" />
                 </svg>
               </div>
               <Typography variant="h3">Skills</Typography>
@@ -193,7 +192,7 @@ export default function Home() {
                   strokeLinejoin="round"
                   className="text-purple-600"
                 >
-                  <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                  <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
                 </svg>
               </div>
               <Typography variant="h3">Contact</Typography>
@@ -218,8 +217,6 @@ export default function Home() {
           </Card>
         </div>
       </ResponsiveContainer>
-
-      <ChatbotButton />
     </main>
   );
 }
